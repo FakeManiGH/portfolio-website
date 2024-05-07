@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #e6e6e6;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(135deg, #252525 0%, #151515 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+body::after {
+    display: block;
+    height: 100px;
+}
+
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.75rem;}
+h4 {font-size: 1.5rem;}
+h5 {font-size: 1.25rem;}
+h6 {font-size: 1rem;}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px;
+    background: #151515;
+    box-shadow: 2px 0 15px #111;
+    gap: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.skill-label {
+    width: 20%;
+    font-weight: 600;
+}
+
+.skill-meter {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 5px;
+    background: #333;
+    overflow: hidden;
+}
+
+.skill-meter-fill {
+    background: #399c39;
+    height: 100%;
+    padding: 8px;
+    text-align: right;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #111;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 2px 0 15px #111;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #399c39;
+    color: #e6e6e6;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+
+    &:hover {
+        background: #2f7c2f;
+    }
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px){
+    
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .skill {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+}
