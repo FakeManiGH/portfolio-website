@@ -7,7 +7,7 @@ function Home() {
       <Header title="Web developer & ICT Specialist" />
       <Main>
         <Section>
-          <img src="src/assets/scribble-logo.png" className="logo" alt="Timo Anjala logo" />
+          <img src="src/assets/scribble-logo.png" className="logo2" alt="Timo Anjala logo" />
           <h1>Welcome to my portfolio!</h1>
           <p>
             I am a web developer and ICT specialist (Identity & Access Management). I have a passion for creating

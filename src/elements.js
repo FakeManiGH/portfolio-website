@@ -93,7 +93,7 @@ const SocialNav = styled.nav`
 const Main = styled.main`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     padding: 20px 20px 100px 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -166,10 +166,33 @@ const RowFlex = styled.div`
     align-items: center;
 `;
 
+const ColumnFlex = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+`;
+
 const AutoGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
+`;
+
+const GridImage = styled.img`
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+`;
+
+const Grid2 = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 
@@ -184,5 +207,6 @@ export { Section };
 export { List };
 export { ListItem };
 export { Button };
-export { RowFlex };
-export { AutoGrid };
+export { RowFlex, ColumnFlex};
+export { AutoGrid, Grid2 };
+export { GridImage };
