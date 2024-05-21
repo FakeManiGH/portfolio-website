@@ -12,7 +12,7 @@ function Skills() {
           <p className="grey">I have experience in multiple markup, script, and query languages. I have skills to build functional web applications (Full stack).</p>
           <SkillMeter language="HTML" level="95" />
           <SkillMeter language="CSS" level="80" />
-          <SkillMeter language="JavaScript" level="60" />
+          <SkillMeter language="JavaScript" level="55" />
           <SkillMeter language="PHP" level="45" />
           <SkillMeter language="SQL" level="75" />
           <SkillMeter language="Python" level="20" />

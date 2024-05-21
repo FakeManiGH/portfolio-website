@@ -17,24 +17,24 @@ function Projects() {
         
         <List>
           <ListItem>
-            <h3>LightBox Overlay - JavaScript - v2.0.1</h3>
-            <p>LightBox Overlay is a script for creating image viewing layer on any webpage that supports JavaScript. LBO is designed to work with image galleries and single images. It is an easy way to implement user friendly image browsing functionality on your web project.</p>
+            <h3>LightBox Overlay - LBOgeneral</h3>
+            <p>LBOgeneral is simple and modern image lightbox for all code projects that use HTML elements, or accept HTML attributes. E.g. HTML, PHP, and JavaScript.</p>
             <RowFlex>
-              <NavLink to='/lightbox'><Button><FontAwesomeIcon icon={faArrowAltCircleRight} /> View project</Button></NavLink>
-              <Button onClick={() => window.open('https://github.com/FakeManiGH/lightbox-overlay', '_blank')}><FontAwesomeIcon icon={faGithub} /> View in GitHub</Button>
+              <NavLink to='/LBOgeneral'><Button><FontAwesomeIcon icon={faArrowAltCircleRight} /> View project</Button></NavLink>
+              <Button onClick={() => window.open('https://github.com/FakeManiGH/lightbox-overlay-general', '_blank')}><FontAwesomeIcon icon={faGithub} /> View in GitHub</Button>
             </RowFlex>
           </ListItem>
           <ListItem>
-            <h3>LightBox Overlay - React - v1.0.0</h3>
-            <p>LightBox Overlay is a script for creating image viewing layer on any webpage that supports JavaScript. LBO is designed to work with image galleries and single images. It is an easy way to implement user friendly image browsing functionality on your web project.</p>
+            <h3>LightBox Overlay - LBOreact</h3>
+            <p>LBOreact is simple and modern image lightbox for all <strong>React</strong> and <strong>Vite + React</strong> projects. Build with React components and supports TypeScript.</p>
             <RowFlex>
-              <NavLink to='/lightbox'><Button><FontAwesomeIcon icon={faArrowAltCircleRight} /> View project</Button></NavLink>
-              <Button onClick={() => window.open('https://github.com/FakeManiGH/lightbox-overlay', '_blank')}><FontAwesomeIcon icon={faGithub} /> View in GitHub</Button>
+              <NavLink to='/LBOreact'><Button><FontAwesomeIcon icon={faArrowAltCircleRight} /> View project</Button></NavLink>
+              <Button onClick={() => window.open('https://github.com/FakeManiGH/lightbox-overlay-react', '_blank')}><FontAwesomeIcon icon={faGithub} /> View in GitHub</Button>
             </RowFlex>
           </ListItem>
           <ListItem>
             <h3>To Do App</h3>
-            <p>A simple to-do-app to set reminders by date.</p>
+            <p>A simple to-do-app where you can set notifications by date.</p>
             <RowFlex>
               <NavLink to='/to-do-app'><Button><FontAwesomeIcon icon={faArrowAltCircleRight} /> View project</Button></NavLink>
               <Button onClick={() => window.open('https://github.com/FakeManiGH/to-do-app', '_blank')}><FontAwesomeIcon icon={faGithub} /> View in GitHub</Button>

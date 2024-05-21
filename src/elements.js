@@ -113,7 +113,29 @@ const List = styled.ul`
     gap: 20px;
     list-style: none;
     padding: 0;
+    margin: 20px 0;
+`;
+
+const CompactList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: .95rem;
+    list-style: disc;
+    padding: 0 0 0 40px;
     margin: 0;
+    color: #e6e6e6;
+`;
+
+const SubList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: circle;
+    font-size: .95rem;
+    padding: 0 0 0 40px;
+    margin: 0;
+    color: #e6e6e6;
 `;
 
 const ListItem = styled.li`
@@ -121,6 +143,7 @@ const ListItem = styled.li`
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
+    font-size: .95rem;
     padding: 20px;
     background: #151515;
     gap: 10px;
@@ -139,10 +162,10 @@ const ListItem = styled.li`
 `;
 
 const Button = styled.button`
-    padding: 10px;
+    padding: .5rem;
     border: none;
-    background: transparent;
-    color: #3b7ba0;
+    background: #0668A3;
+    color: #e6e6e6;
     width: -moz-fit-content;
     width: fit-content;
     font-family: 'Roboto', sans-serif;
@@ -153,9 +176,7 @@ const Button = styled.button`
     transition: background 0.3s, color 0.3s;
 
     &:hover {
-        border-color: #3b7ba0;
-        background: #3b7ba0;
-        color: #e6e6e6;
+        background: #055485;
     }
 `;
 
@@ -164,6 +185,7 @@ const RowFlex = styled.div`
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
 `;
 
 const ColumnFlex = styled.div`
@@ -177,12 +199,12 @@ const AutoGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
-`;
 
-const GridImage = styled.img`
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    & img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
 `;
 
 const Grid2 = styled.div`
@@ -204,9 +226,8 @@ export { MainNavigation };
 export { SocialNav };
 export { Main };
 export { Section };
-export { List };
+export { List, CompactList, SubList };
 export { ListItem };
 export { Button };
 export { RowFlex, ColumnFlex};
 export { AutoGrid, Grid2 };
-export { GridImage };
