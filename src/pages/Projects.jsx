@@ -36,7 +36,7 @@ function Projects() {
             <h3>To Do App</h3>
             <p>A simple to-do-app where you can set notifications by date.</p>
             <RowFlex>
-              <NavLink to='/to-do-app'><Button><FontAwesomeIcon icon={faArrowAltCircleRight} /> View project</Button></NavLink>
+              <NavLink to='/ToDo'><Button><FontAwesomeIcon icon={faArrowAltCircleRight} /> View project</Button></NavLink>
               <Button onClick={() => window.open('https://github.com/FakeManiGH/to-do-app', '_blank')}><FontAwesomeIcon icon={faGithub} /> View in GitHub</Button>
             </RowFlex>
           </ListItem>

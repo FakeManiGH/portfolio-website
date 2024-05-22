@@ -5,3 +5,4 @@ export { default as Projects } from './Projects';
 export { default as Skills } from './Skills';
 export { default as LBOgeneral } from './LBOgeneral';
 export { default as LBOreact } from './LBOreact';
+export { default as ToDo } from './ToDo';

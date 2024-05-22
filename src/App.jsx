@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { Navigation, Footer } from './components';
-import { Home, About, Projects, Skills, LBOgeneral, LBOreact } from "./pages";
+import { Home, About, Projects, Skills, LBOgeneral, LBOreact, ToDo } from "./pages";
 
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/LBOgeneral" element={<LBOgeneral />} />
           <Route path="/LBOreact" element={<LBOreact />} />
+          <Route path="/ToDo" element={<ToDo />} />
         </Routes>
         <Footer />
       </Router>

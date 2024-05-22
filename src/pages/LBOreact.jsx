@@ -106,7 +106,7 @@ function LBOreact() {
             <CodeBlock code={`import { LBOimage } from 'lightbox-overlay-react';`} />
             <p>Activate LBO for single image:</p>
             <CodeBlock code={`<LBOimage src="src/assets/lbo_single.jpg" title="image title" alt="image description" />`} />
-            <p>Example of a gallery setup:</p>
+            <p>Example of a gallery setup in app:</p>
 <CodeBlock code={`
 import { LBOimage } from 'lightbox-overlay-react';
 
@@ -126,6 +126,7 @@ function App() {
 
 export default App;
 `} />
+          <p><strong>Remember!</strong> Add alt=&quot;image description&quot; attribute to all images for accessibility.</p>
           </ListItem>
 
           <hr />

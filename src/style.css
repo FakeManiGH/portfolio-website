@@ -39,9 +39,16 @@ h4 {font-size: 1.5rem; color: #e6e6e6;}
 h5 {font-size: 1.25rem; color: #e6e6e6;}
 h6 {font-size: 1rem; color: #e6e6e6;}
 p {font-size: 1rem; color: #e6e6e6;}
+label {font-size: 1rem; color: #e6e6e6;}
 
 .grey {
     color: #777;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #555;
+    margin: 10px 0;
 }
 
 header {
@@ -125,7 +132,9 @@ footer {
     text-decoration: none;
 
     &:hover {
+        color: #e6e6e6;
         background: #399c39;
+        text-decoration: none;
     }
 }
 
@@ -171,6 +180,18 @@ code {
     }
 }
 
+.task {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+    color: #e6e6e6;
+    background: #151515;
+    border-radius: 5px;
+}
+
+
 /* Responsive */
 
 @media screen and (max-width: 768px){
@@ -189,6 +210,9 @@ code {
     }
     .skill-label {
         width: 100%;
+    }
+    .input_group {
+        flex-direction: column;
     }
     
 }
