@@ -29,11 +29,11 @@ const Task: React.FC<TaskProps> = ({ id, task, date, editTask, deleteTask }) => 
         const due = new Date(dueDate);
         const diff = Math.ceil((due.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
       
-        if (diff > 1) {
+        if (diff > 2) {
           return '#399c39';
-        } else if (diff === 1) {
+        } else if (diff === 2) {
           return '#ff9900';
-        } else if (diff === 0){
+        } else {
           return '#FF4400';
         }
     };

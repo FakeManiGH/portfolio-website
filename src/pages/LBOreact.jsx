@@ -1,26 +1,36 @@
 import { CodeBlock, Header } from '../components';
 import { NavLink } from "react-router-dom";
-import { Section, Main, Button, AutoGrid, List, ListItem, CompactList, SubList } from '../elements';
+import { Section, Main, Button, AutoGrid, List, ListItem, CompactList, SubList, RowFlex } from '../elements';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faNpm } from '@fortawesome/free-brands-svg-icons';
 import { HashLink } from 'react-router-hash-link';
 import { LBOimage } from 'lightbox-overlay-react';
+import { Helmet } from "react-helmet";
 
 
 function LBOreact() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>LightBox Overlay React</title>
+        <meta name="description" content="LBOreact is simple and modern image lightbox for React projects. Supports Vite + React projects and TypeScript." />
+        <meta name="keywords" content="LightBox Overlay, LBO, LBOreact, images, gallery, browsing, React, TypeScript" />
+      </Helmet>
+
       <Header title="LightBox Overlay - LBOreact" />
       <Main>
         <Section>
             <img src="src/assets/lbo.png" className="logo" alt="LightBox Overlay Logo" />
-            <h1>LBO React v1.2.0</h1>
-            <a href="https://github.com/FakeManiGH/lightbox-overlay-react" target="_blank" rel="noopener noreferrer">
-                <Button><FontAwesomeIcon icon={faGithub} /> Download from GitHub</Button>
-            </a>
+            <h1>LBO React</h1>
+            <RowFlex>
+              <a href="https://github.com/FakeManiGH/lightbox-overlay-react" target="_blank" rel="noopener noreferrer">
+                  <Button><FontAwesomeIcon icon={faGithub} /> View in GitHub</Button>
+              </a>
+              <a href="https://www.npmjs.com/package/lightbox-overlay-react" target="_blank" rel="noopener noreferrer">
+                  <Button><FontAwesomeIcon icon={faNpm} /> View NPM</Button>
+              </a>
+            </RowFlex>
         </Section>
-
-        <hr />
         
         <Section>
           {/* Contents */}
@@ -171,7 +181,7 @@ export default App;
 
         </List>
       </Main>
-    </div>
+    </>
   );
 }
 

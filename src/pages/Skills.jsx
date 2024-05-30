@@ -1,67 +1,114 @@
 import { Header, SkillMeter } from '../components';
-import { Section, Main } from '../elements';
+import { Main, List, ListItem, Button } from '../elements';
+import { Form } from 'react-bootstrap'; 
+import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Helmet} from "react-helmet";
 
 
 function Skills() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value);
+
+    if (event.target.value === '') {
+      handleReset();
+    }
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const skills = Array.from(document.querySelectorAll('.skill-label'));
+    skills.forEach(skill => {
+      if (skill.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+        skill.parentElement.style.display = 'flex';
+      } else {
+        skill.parentElement.style.display = 'none';
+      }
+    });
+  }
+
+  const handleReset = () => {
+    const skills = Array.from(document.querySelectorAll('.skill-label'));
+    const searchForm = document.getElementById('search-form');
+    searchForm.reset();
+    skills.forEach(skill => {
+      skill.parentElement.style.display = 'flex';
+    });
+  }
+
   return (
     <>
-      <Header title="Web Development and IT Skills" />
+      <Helmet>
+        <title>TA - Skills</title>
+        <meta name="description" content="List of my Language, Service, Media, and ITC skills in general." />
+        <meta name="keywords" content="Languages, ITC, Frameworks, Libraries, Tools, Services, IAM, Media" />
+      </Helmet>
+
+      <Header title="My Skills" />
       <Main>
-        <Section>
-          <h2>Language Skills</h2>
-          <p className="grey">I have experience in multiple markup, script, and query languages. I have skills to build functional web applications (Full stack).</p>
-          <SkillMeter language="HTML" level="95" />
-          <SkillMeter language="CSS" level="80" />
-          <SkillMeter language="JavaScript" level="55" />
-          <SkillMeter language="PHP" level="45" />
-          <SkillMeter language="SQL" level="75" />
-          <SkillMeter language="Python" level="20" />
-        </Section>
 
-        <Section>
-          <h2>Frameworks</h2>
-          <p className="grey">I have deep div... swimming in kids pool, learning different frameworks.</p>
-          <SkillMeter language="React" level="40" />
-          <SkillMeter language="Node.js" level="35" />
-          <SkillMeter language="Laravel" level="20" />
-        </Section>
+        {/* Skill search bar */}
+        <Form id="search-form" onSubmit={handleSearch}>
+          <Form.Group className='d-flex flex-row gap-2 mt-2' controlId="search">
+            <Form.Control onChange={handleInputChange} type="text" placeholder="Search for a skill..." />
+            <Button onClick={handleSearch} variant="primary">Search</Button>
+          </Form.Group>
+        </Form>
 
-        <Section>
-          <h2>Tools and Libraries</h2>
-          <p className="grey">Some tools and libraries I use or have used in my projects.</p>
-          <SkillMeter language="Git" level="40" />
-          <SkillMeter language="Docker" level="20" />
-          <SkillMeter language="Bootstrap" level="45" />
-          <SkillMeter language="VSCode" level="65" />
-        </Section>
+        <List>
+          <ListItem>
+            <h2>Language Skills</h2>
+            <SkillMeter skill="HTML" level="95" />
+            <SkillMeter skill="CSS" level="80" />
+            <SkillMeter skill="JavaScript" level="55" />
+            <SkillMeter skill="PHP" level="45" />
+            <SkillMeter skill="SQL" level="75" />
+            <SkillMeter skill="Python" level="20" />
+          </ListItem>
 
-        <Section>
-          <h2>Identity & Access Management</h2>
-          <p className="grey">I have experience in few Identity & Access Management systems. I also have aquired some experience in CRM and ITSM SaaS (ServiceNow).</p>
-          <SkillMeter language="Micro Focus NetIQ" level="55" />
-          <SkillMeter language="Azure AD" level="50" />
-          <SkillMeter language="One Indentity" level="40" />
-          <SkillMeter language="ServiceNow" level="60" />
-        </Section>
+          <ListItem>
+            <h2>Frameworks</h2>
+            <SkillMeter skill="React" level="40" />
+            <SkillMeter skill="Node.js" level="35" />
+            <SkillMeter skill="Laravel" level="20" />
+          </ListItem>
 
-        <Section>
-          <h2>Media Tools</h2>
-          <p className="grey">I often use various media tools on my work and hobbies. I have fair amount of experience in photo editing, photo manipulation and 2D graphics.</p>
-          <SkillMeter language="Adobe Lightroom" level="95" />
-          <SkillMeter language="Adobe Photoshop" level="50" />
-          <SkillMeter language="Adobe Illustrator" level="50" />
-          <SkillMeter language="GIMP" level="75" />
-          <SkillMeter language="Inkscape" level="30" />
-        </Section>
+          <ListItem>
+            <h2>Tools and Libraries</h2>
+            <SkillMeter skill="Git" level="40" />
+            <SkillMeter skill="Docker" level="10" />
+            <SkillMeter skill="Bootstrap" level="45" />
+            <SkillMeter skill="VSCode" level="65" />
+          </ListItem>
 
-        <Section>
-          <h2>Other Skills</h2>
-          <SkillMeter language="Linux" level="40" />
-          <SkillMeter language="Windows Server" level="50" />
-          <SkillMeter language="Networking" level="55" />
-          <SkillMeter language="Virtual Machines & Environments" level="70" />
-          <SkillMeter language="ITIL" level="35" />
-        </Section>
+          <ListItem>
+            <h2>Identity & Access Management</h2>
+            <SkillMeter skill="Micro Focus NetIQ" level="55" />
+            <SkillMeter skill="Azure AD" level="50" />
+            <SkillMeter skill="One Indentity" level="40" />
+            <SkillMeter skill="ServiceNow" level="60" />
+          </ListItem>
+
+          <ListItem>
+            <h2>Media Tools</h2>
+            <SkillMeter skill="Adobe Lightroom" level="95" />
+            <SkillMeter skill="Adobe Photoshop" level="50" />
+            <SkillMeter skill="Adobe Illustrator" level="50" />
+            <SkillMeter skill="GIMP" level="75" />
+            <SkillMeter skill="Inkscape" level="30" />
+          </ListItem>
+
+          <ListItem>
+            <h2>Other Skills</h2>
+            <SkillMeter skill="Linux" level="40" />
+            <SkillMeter skill="Windows Server" level="50" />
+            <SkillMeter skill="Networking" level="55" />
+            <SkillMeter skill="Virtual Machines & Environments" level="70" />
+            <SkillMeter skill="ITIL" level="35" />
+          </ListItem>
+        </List>
       </Main>
     </>
   );

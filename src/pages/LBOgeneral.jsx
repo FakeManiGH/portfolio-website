@@ -5,23 +5,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { HashLink } from 'react-router-hash-link';
 import { LBOimage } from 'lightbox-overlay-react';
+import { Helmet } from "react-helmet";
 
 
 function LBOgeneral() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>LightBox Overlay General</title>
+        <meta name="description" content="LBOgeneral is simple and modern image lightbox for all code projects that use HTML elements, or accept HTML attributes." />
+        <meta name="keywords" content="LightBox Overlay, LBO, LBOgeneral, images, gallery, browsing, JavaScript" />
+      </Helmet>
+
       <Header title="LightBox Overlay - LBOgeneral" />
       <Main>
         <Section>
           <img src="src/assets/lbo.png" className="logo" alt="LightBox Overlay Logo" />
-          <h1>LBO General v2.1.0</h1>
+          <h1>LBO General</h1>
           <a href="https://github.com/FakeManiGH/lightbox-overlay-general" target="_blank" rel="noopener noreferrer">
             <Button><FontAwesomeIcon icon={faGithub} /> Download from GitHub</Button>
           </a>
         </Section>
 
-        <hr />
-        
         <Section>
           {/* Contents */}
           <h2>Contents</h2>
@@ -182,7 +187,7 @@ function LBOgeneral() {
 
         </List>
       </Main>
-    </div>
+    </>
   );
 }
 

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { NavBar, MainNavigation, SocialNav } from "../elements/";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faCode, faBars, faListCheck } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faCode, faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 function Navigation() {
@@ -30,8 +30,8 @@ function Navigation() {
       <FontAwesomeIcon icon={faBars} className="burger_btn" onClick={showMenu} />
       <MainNavigation id="main_navigation">
           <NavLink to="/" end><FontAwesomeIcon icon={faHome} /> Home</NavLink>
-          <NavLink to="/projects"><FontAwesomeIcon icon={faListCheck} /> Projects</NavLink>
-          <NavLink to="/skills"><FontAwesomeIcon icon={faCode} /> Skills</NavLink>
+          <NavLink to="/projects"><FontAwesomeIcon icon={faCode} /> Projects</NavLink>
+          <NavLink to="/contact"><FontAwesomeIcon icon={faEnvelope} /> Contact</NavLink>
           <NavLink to="/about"><FontAwesomeIcon icon={faUser} /> About</NavLink>
       </MainNavigation>
     </NavBar>

@@ -65,7 +65,7 @@ function ToDo() {
         <hr />
         
         <div className='container gap-2'>
-          <h3 className='fw-bold'>MY TASKS</h3>
+          <h3 className='fw-bold mb-3'>MY TASKS</h3>
           {tasks.sort((a: { date: string; }, b: { date: string; }) => Date.parse(a.date) - Date.parse(b.date)).map((task: { id: number; task: string; date: string; }, index: number) => (
             <Task
               key={task.id}
