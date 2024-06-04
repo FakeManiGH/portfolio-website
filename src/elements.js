@@ -101,7 +101,7 @@ const Main = styled.main`
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 40px 20px 100px 20px;
+    padding: 40px 20px 140px 20px;
     max-width: 1200px;
     margin: 0 auto;
 `;
@@ -170,7 +170,11 @@ const ListItem = styled.li`
 `;
 
 const Button = styled.button`
-    padding: .4rem .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: .4rem .6rem;
     border: none;
     background: linear-gradient(135deg, #399c39 0%, #405030 100%);
     color: #e6e6e6;
@@ -182,11 +186,16 @@ const Button = styled.button`
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;
+    transition: gap 0.3s, background 0.3s, box-shadow 0.3s, color 0.3s;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 
     &:hover {
         color: #111;
+        gap: 10px;
+    }
+
+    &.active {
+        border: 3px solid #e6e6e6;
     }
 `;
 
@@ -226,6 +235,12 @@ const Grid2 = styled.div`
     }
 `;
 
+const Accordion = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+`;
+
 
 
 
@@ -240,3 +255,4 @@ export { ListItem };
 export { Button };
 export { RowFlex, ColumnFlex};
 export { AutoGrid, Grid2 };
+export { Accordion };

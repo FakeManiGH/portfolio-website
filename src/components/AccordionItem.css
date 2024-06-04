@@ -1,0 +1,27 @@
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    background: #151515;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: #111;
+    }
+}
+
+.accordion-content {
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

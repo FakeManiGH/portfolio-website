@@ -4,6 +4,7 @@ import {Helmet} from "react-helmet";
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage} from '@fortawesome/free-solid-svg-icons';
+import scribbleLogo from '../assets/scribble-logo.png';
 
 function Home() {
   return (
@@ -16,9 +17,9 @@ function Home() {
 
       <Header title="Web Developer & ICT Specialist" />
       <Main>
-          <img src="src/assets/scribble-logo.png" className="logo2" alt="Timo Anjala logo" />
+          <img src={scribbleLogo} className="logo2" alt="Timo Anjala logo" />
 
-          <h1>Welcome to my portfolio!</h1>
+          <h1>Welcome to My Portfolio!</h1>
           <p>
             I am a web developer and ICT specialist (Identity & Access Management). I have a passion for creating
             and developing websites and applications. I am always looking for new challenges and opportunities to learn new technologies.
@@ -29,7 +30,7 @@ function Home() {
 
           <h5>Looking for my photography?</h5>
           <p>One of my favorite hobbies is nature and scenery photography. If you are interested to see some of my shots, you can visit my gallery.</p>
-          <NavLink to="/photography"><FontAwesomeIcon icon={faImage} /> Visit My Gallery</NavLink>
+          <p><NavLink to="#" style={{textDecoration: 'line-through'}}><FontAwesomeIcon icon={faImage} /> Visit My Gallery</NavLink> (Opening soon...)</p>
       </Main>
     </>
     

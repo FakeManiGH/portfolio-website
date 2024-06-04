@@ -4,3 +4,4 @@ export { default as Navigation } from './Navigation';
 export { default as Footer } from './PageFooter';
 export { default as SkillMeter } from './SkillMeter';
 export { default as CodeBlock } from './CodeBlock';
+export { default as AccordionItem } from './AccordionItem';

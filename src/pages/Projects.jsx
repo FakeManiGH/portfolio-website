@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import { NavLink } from "react-router-dom";
 import { Main, List, ListItem, Button, RowFlex } from '../elements';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faNpm } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { Helmet } from "react-helmet";
@@ -34,6 +34,7 @@ function Projects() {
             <RowFlex>
               <NavLink to='/LBOreact'><Button><FontAwesomeIcon icon={faArrowAltCircleRight} /> View project</Button></NavLink>
               <Button onClick={() => window.open('https://github.com/FakeManiGH/lightbox-overlay-react', '_blank')}><FontAwesomeIcon icon={faGithub} /> View in GitHub</Button>
+              <Button onClick={() => window.open('https://www.npmjs.com/package/lboreact', '_blank')}><FontAwesomeIcon icon={faNpm} /> View NPM</Button>
             </RowFlex>
           </ListItem>
 

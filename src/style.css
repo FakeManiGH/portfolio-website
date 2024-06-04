@@ -221,6 +221,11 @@ code {
     margin-bottom: 10px;
 }
 
+.accordion-header {
+    background-color: #343a40 !important; /* Same as .bg-dark */
+    color: #fff !important; /* Same as .text-white */
+}
+
 
 /* Responsive */
 

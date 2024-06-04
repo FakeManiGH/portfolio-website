@@ -20,6 +20,14 @@ function Navigation() {
     }
   });
 
+  // Close the menu when a link is clicked
+  document.querySelectorAll('nav a').forEach( link => {
+    link.addEventListener('click', () => {
+      const nav = document.getElementById('main_navigation');
+      nav.style.display = 'none';
+    });
+  });
+
   return (
     <NavBar>
       <SocialNav>

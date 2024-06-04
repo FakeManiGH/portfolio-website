@@ -6,6 +6,12 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { HashLink } from 'react-router-hash-link';
 import { LBOimage } from 'lightbox-overlay-react';
 import { Helmet } from "react-helmet";
+import lbo from '../assets/lbo.png';
+import lboSingle from '../assets/lbo_single.jpg';
+import lboGallery1 from '../assets/lbo_gallery_1.jpg';
+import lboGallery2 from '../assets/lbo_gallery_2.jpg';
+import lboGallery3 from '../assets/lbo_gallery_3.jpg';
+import lboGallery4 from '../assets/lbo_gallery_4.jpg';
 
 
 function LBOgeneral() {
@@ -20,7 +26,7 @@ function LBOgeneral() {
       <Header title="LightBox Overlay - LBOgeneral" />
       <Main>
         <Section>
-          <img src="src/assets/lbo.png" className="logo" alt="LightBox Overlay Logo" />
+          <img src={lbo} className="logo" alt="LightBox Overlay Logo" />
           <h1>LBO General</h1>
           <a href="https://github.com/FakeManiGH/lightbox-overlay-general" target="_blank" rel="noopener noreferrer">
             <Button><FontAwesomeIcon icon={faGithub} /> Download from GitHub</Button>
@@ -78,15 +84,15 @@ function LBOgeneral() {
             <p>LBO works for both single image and image gallery. Below you find example, how it works in both cases.</p>
             <h5>Single image</h5>
             <AutoGrid>
-              <LBOimage src="src/assets/lbo_single.jpg" alt="Single image preview" title="Foggy winter weahter..." />
+              <LBOimage src={lboSingle} alt="Single image preview" title="Foggy winter weahter..." />
             </AutoGrid>
 
             <h5>Image gallery</h5>
             <AutoGrid>
-              <LBOimage src="src/assets/lbo_gallery_1.jpg" title="Roe deer resting" gallery="gallery" alt="Roe deer resting" />
-              <LBOimage src="src/assets/lbo_gallery_2.jpg" title="Roe deer on snowy field" gallery="gallery" alt="Roe deer on snowy field" download />
-              <LBOimage src="src/assets/lbo_gallery_3.jpg" title="Lizzard between pier boards" gallery="gallery" alt="Lizzard between pier boards" download />
-              <LBOimage src="src/assets/lbo_gallery_4.jpg" title="Fox standing on hay bale" gallery="gallery" alt="Fox standing on hay bale" />
+              <LBOimage src={lboGallery1} title="Roe deer resting" gallery="gallery" alt="Roe deer resting" />
+              <LBOimage src={lboGallery2} title="Roe deer on snowy field" gallery="gallery" alt="Roe deer on snowy field" download />
+              <LBOimage src={lboGallery3} title="Lizzard between pier boards" gallery="gallery" alt="Lizzard between pier boards" download />
+              <LBOimage src={lboGallery4} title="Fox standing on hay bale" gallery="gallery" alt="Fox standing on hay bale" />
             </AutoGrid>
           </ListItem>
 
